@@ -77,5 +77,5 @@ const root = createRoot(rootElement);
 ```
 
 ## App Link
-https://react-movie-searchv.netlify.app/
+[https://react-movie-searchv.netlify.app/](https://fascinating-movie-search.netlify.app/)
 
