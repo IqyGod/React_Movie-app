@@ -6,20 +6,12 @@ import './App.css';
 import SearchIcon from './search.svg';
 
 
-// http://localhost:3000     
 
 // use the key requested by myself
 // connect to imdb api
 const API_URL = "http://www.omdbapi.com?apikey=449d0896";
 
-// take an example for data stretch in return div
-const movie1 = {
-    Poster: "https://m.media-amazon.com/images/M/MV5BYjFhN2RjZTctMzA2Ni00NzE2LWJmYjMtNDAyYTllOTkyMmY3XkEyXkFqcGdeQXVyNTA0OTU0OTQ@._V1_SX300.jpg",
-    Title: "Italian Spiderman",
-    Type: "movie",
-    Year: "2007",
-    imdbID: "tt2705436"
-}
+// take an example for data stretch in return div. now remove this part.
 
 
 const App = () => {
