@@ -56,7 +56,7 @@ $ npx create-react-app ./
 
 ### API 
 Movie API with IMDb.com
-<br> Link to retriece the key : http://www.omdbapi.com/apikey.aspx
+<br> Link to retriece the key : https://www.omdbapi.com/apikey.aspx
 <br>
 
 ### ReactDOM.render
