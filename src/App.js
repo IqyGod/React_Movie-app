@@ -9,7 +9,8 @@ import SearchIcon from './search.svg';
 
 // use the key requested by myself
 // connect to imdb api
-const API_URL = "http://www.omdbapi.com?apikey=449d0896";
+// use https !! 
+const API_URL = "https://www.omdbapi.com?apikey=449d0896";
 
 // take an example for data stretch in return div. now remove this part.
 
