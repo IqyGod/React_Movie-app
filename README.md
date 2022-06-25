@@ -12,7 +12,7 @@
 
 
 In this project, the project of visualization of the React concepts. 
-<br> We built a movies search app in single page, no page reload, by utilizing 3 most important concepts of React : 
+<br> I built a movies search app in single page, no page reload, by utilizing 3 most important concepts of React : 
 - Component
 - Props
 - State
