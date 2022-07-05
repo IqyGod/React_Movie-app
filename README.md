@@ -62,3 +62,4 @@ Movie API with IMDb.com
 ## App Link
 https://fascinating-movie-search.netlify.app/
 
+
