@@ -19,13 +19,12 @@ In this project, the project of visualization of the React concepts.
 
 
 Alongwith hooks, 2 hooks are used here : useState, useEffect.
-<br> we can have multiple states or multiple useEffect hooks per Component.
-<br> useState: 
-- [movies, setMovies] ==> user input in search bar
-- [searchTerm, setSearchTerm] ==> display for movie search output
+<br> __useState__: state will hook into the component
+- [movies, setMovies] ==> display for movie search output
+- [searchTerm, setSearchTerm] ==> user input in search bar
 
 <br >And events - the onClick listener :
-- use the state ___setSearchTerm___ to dynamically rerender the movie arrays
+- use the value of state ___setSearchTerm.name___ to dynamically rerender the movie arrays
 
 <br>
 
@@ -58,23 +57,7 @@ $ npx create-react-app ./
 Movie API with IMDb.com
 <br> Link to retriece the key : https://www.omdbapi.com/apikey.aspx
 <br>
-
-### ReactDOM.render
-Up to June 2022, ReactDOM.render is no longer supported in React 18. 
-<br> Use createRoot instead. 
-
-__code in index.js__ : 
-```
-import App from './App';
-const rootElement = document.getElementById("root");
-const root = createRoot(rootElement);
-
- root.render(
-  <StrictMode>
-    <App />
-  </StrictMode>
-);
-```
+<br>
 
 ## App Link
 https://fascinating-movie-search.netlify.app/
