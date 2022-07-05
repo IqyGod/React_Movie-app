@@ -1,37 +1,60 @@
-import { useEffect, useState } from 'react';
-
+import React from 'react';
 import MovieCard from './MovieCard';
-
-import './App.css';
+import './style.css';
 import SearchIcon from './search.svg';
 
 
 
 // use the key requested by myself
 // connect to imdb api
-// use https !! 
 const API_URL = "https://www.omdbapi.com?apikey=449d0896";
 
-// take an example for data stretch in return div. now remove this part.
+
+export default function App() {
+
+    // set up state
+    const [movies, setMovies] = React.useState([]);
+
+    const [searchTerm, setSearchTerm] = React.useState({
+        searchInput: ""
+    });
 
 
-const App = () => {
-
-    const [movies, setMovies] = useState([]);
-    const [searchTerm, setSearchTerm] = useState('');
+    // useEffect function --> console.log(data.Search) to fetch the info
+    React.useEffect(() => {
+        searchMovies('CSI')
+    }, [])
 
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json();
-
-        // log to check data output
+        // update state through setState
         setMovies(data.Search)
+        //console.log(data.Search)
     }
 
 
-    useEffect(() => {
-        searchMovies('Spiderman')
-    }, [])
+    // event listener
+    function Toggle(event) {
+        const { name, value } = event.target
+        setSearchTerm(prevState => ({
+            ...prevState,
+            [name]: value
+        }))
+    }
+
+
+
+    const cards = movies.map(item => {
+        return (
+            <MovieCard
+                key={item.imdbID}
+                {...item}
+            />
+        )
+    })
+
+
 
     return (
         <div className='app'>
@@ -40,22 +63,23 @@ const App = () => {
             <div className='search'>
                 <input
                     placeholder='Search for movies'
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)} />
+                    value={searchTerm.searchInput}
+                    name="searchInput"
+                    onChange={Toggle} />
                 <img
                     src={SearchIcon}
                     alt='search icon'
-                    onClick={() => searchMovies(searchTerm)} />
+                    onClick={() => searchMovies(searchTerm.searchInput)}
+                />
+
             </div>
 
 
             {
-                movies?.length > 0
+                movies.length > 0
                     ? (
                         <div className='container'>
-                            {movies.map((movie) => (
-                                <MovieCard movie={movie} />
-                            ))}
+                            {cards}
                         </div>
                     )
                     : (
@@ -64,12 +88,7 @@ const App = () => {
                         </div>
                     )
             }
-
-
-
-
         </div>
     )
-};
+}
 
-export default App;
