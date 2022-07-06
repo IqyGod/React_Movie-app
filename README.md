@@ -1,10 +1,16 @@
 # React_Movie-search-App
 ## Table of contents
+* [App Link](#app-link)
 * [General info](#general-information)
 * [Stretch Goals](#stretch-goals)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [App Link](#app-link)
+
+<br>
+
+## App Link
+https://fascinating-movie-search.netlify.app/
+
 <br>
 
 ## General information
@@ -58,8 +64,5 @@ Movie API with IMDb.com
 <br> Link to retriece the key : https://www.omdbapi.com/apikey.aspx
 <br>
 <br>
-
-## App Link
-https://fascinating-movie-search.netlify.app/
 
 
